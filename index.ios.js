@@ -23,8 +23,7 @@ export default class ReactNativeTalk extends Component {
           To get started, edit index.ios.js
         </Text>
         <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
+         Hello on ReactNative Talk
         </Text>
       </View>
     );
