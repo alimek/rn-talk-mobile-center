@@ -12,8 +12,6 @@ import {
   View
 } from 'react-native';
 
-import App from './app/index';
-
 export default class ReactNativeTalk extends Component {
   render() {
     return (
@@ -51,4 +49,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('ReactNativeTalk', () => App);
+AppRegistry.registerComponent('ReactNativeTalk', () => ReactNativeTalk);

@@ -6,8 +6,6 @@ import firebase from '../firebase';
 const {
   View,
   Text,
-  ScrollView,
-  FlatList,
 } = ReactNative;
 
 class FeedsPage extends React.Component {
