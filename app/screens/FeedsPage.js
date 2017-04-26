@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactNative from 'react-native';
 
-import NewPostForm from '../containers/NewPostForm';
-import Post from '../containers/Post';
-import FeedDetailsPage from './FeedDetailsPage';
-import CardPlaceholder from '../components/CardPlaceholder';
-
 import firebase from '../firebase';
 
 const {
+  View,
+  Text,
   ScrollView,
   FlatList,
 } = ReactNative;
@@ -27,39 +24,11 @@ class FeedsPage extends React.Component {
   }
 
   render() {
-    const { navigator } = this.props;
-
-    if (this.state.posts.length === 0) {
-      return (
-        <ScrollView contentContainerStyle={{ flex: 1, justifyContent: 'center' }}>
-          <CardPlaceholder />
-          <CardPlaceholder />
-          <CardPlaceholder />
-          <CardPlaceholder />
-          <CardPlaceholder />
-        </ScrollView>
-      );
-    }
-
     return (
-      <FlatList
-        ListHeaderComponent={NewPostForm}
-        data={this.state.posts}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <Post
-            post={item}
-            onPress={() => navigator.push({
-              component: FeedDetailsPage,
-              title: item.id,
-              passProps: {
-                post: item,
-              },
-            })}
-          />
-        )}
-      />
-    );
+      <View>
+        <Text>FeedsPage</Text>
+      </View>
+    )
   }
 }
 

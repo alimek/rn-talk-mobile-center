@@ -25,7 +25,7 @@ const NavigationBarRouteMapper = {
         <TouchableHighlight
           underlayColor="transparent"
           onPress={() => { if (index > 0) { navigator.pop() } }}>
-          <Text style={ styles.leftNavButtonText }>Back</Text>
+          <Text style={styles.leftNavButtonText}>Back</Text>
         </TouchableHighlight>)
     }
     else { return null }
@@ -34,7 +34,7 @@ const NavigationBarRouteMapper = {
     if (route.onPress) return (
       <TouchableHighlight
         onPress={ () => route.onPress() }>
-        <Text style={ styles.rightNavButtonText }>
+        <Text style={styles.rightNavButtonText}>
           { route.rightText || 'Right Button' }
         </Text>
       </TouchableHighlight>)
@@ -53,17 +53,6 @@ const Navigation = () => (
       title: `Activity - Your platform: ${Platform.OS}`
     }}
     renderScene={renderScene}
-    // sceneStyle={{
-    //   marginTop: 64,
-    //   flex: 1,
-    //   backgroundColor: '#dfdfdf',
-    // }}
-    // navigationBar={
-    //   <Navigator.NavigationBar
-    //     style={styles.nav}
-    //     routeMapper={NavigationBarRouteMapper}
-    //   />
-    // }
   />
 );
 
