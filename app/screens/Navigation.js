@@ -47,12 +47,23 @@ const NavigationBarRouteMapper = {
 const Navigation = () => (
   <Navigator
     configureScene={configureScene}
-    style={{ flex:1 }}
+    style={{ flex: 1 }}
     initialRoute={{
       component: FeedsPage,
       title: `Activity - Your platform: ${Platform.OS}`
     }}
     renderScene={renderScene}
+    sceneStyle={{
+      marginTop: Platform.OS === 'ios' ? 64 : 55,
+      flex: 1,
+      backgroundColor: '#dfdfdf',
+    }}
+    navigationBar={
+      <Navigator.NavigationBar
+        style={styles.nav}
+        routeMapper={NavigationBarRouteMapper}
+      />
+    }
   />
 );
 

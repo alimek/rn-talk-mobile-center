@@ -8,10 +8,6 @@ const {
   Text,
 } = ReactNative;
 
-const FacebookExample = () => (
-  <View>
-    <Text>Navigation screen</Text>
-  </View>
-);
+const FacebookExample = () => <Navigation />;
 
 export default FacebookExample;
